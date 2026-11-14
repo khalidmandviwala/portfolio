@@ -1,4 +1,4 @@
-<!DOCTYPE html>f
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
@@ -305,6 +305,29 @@ footer{margin-top:110px;background:#fff;border-top:1px solid var(--line)}
   [dir=rtl] .totop{left:16px;right:auto}
 }
 
+/* ICONS */
+.ico svg,.ic2 svg,.ic svg,.fi svg,.step .sico svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ico svg{width:24px;height:24px}
+.ic svg{width:24px;height:24px}
+.fi{width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;margin-bottom:22px;position:relative;color:#fff}
+.fi svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic2{color:var(--primary)}
+
+/* HOW I WORK (infographic) */
+.proc-h{font-size:22px;font-weight:700;margin:64px 0 30px;text-align:center}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
+.process::before{content:'';position:absolute;top:34px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,var(--violet) 0 8px,transparent 8px 16px);opacity:.5}
+.step{text-align:center;position:relative;padding:0 10px}
+.step .sico{width:68px;height:68px;margin:0 auto;border-radius:50%;background:#fff;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--primary);box-shadow:var(--shadow);position:relative;z-index:1;transition:transform .35s,background .3s,color .3s}
+.step .sico svg{width:26px;height:26px}
+.step:hover .sico{transform:translateY(-6px) scale(1.06);background:var(--primary);color:#fff}
+.step .num{font-size:11px;font-weight:700;color:var(--violet);letter-spacing:1.5px;margin-top:18px}
+.step h5{font-size:18px;font-weight:700;margin-top:4px}
+.step p{font-size:13.5px;color:var(--mid);margin-top:6px}
+@media (max-width:900px){.process{grid-template-columns:repeat(2,1fr);row-gap:32px}.process::before{display:none}}
+@media (max-width:640px){.process{grid-template-columns:1fr}}
+
+
 /* KEYFRAMES */
 @keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 
@@ -430,11 +453,11 @@ footer{margin-top:110px;background:#fff;border-top:1px solid var(--line)}
       </form>
 
       <div class="quick">
-        <a class="q" href="#services"><div class="ico">PRD</div><span class="en">Product development</span><span class="ar">تطوير المنتجات</span></a>
-        <a class="q" href="#services"><div class="ico">SUP</div><span class="en">Technical support</span><span class="ar">الدعم الفني</span></a>
-        <a class="q" href="#services"><div class="ico">API</div><span class="en">Integrations</span><span class="ar">التكاملات</span></a>
-        <a class="q" href="#skills"><div class="ico">RTL</div><span class="en">Arabic &amp; RTL</span><span class="ar">العربية و RTL</span></a>
-        <a class="q" href="#work"><div class="ico">ALL</div><span class="en">All work</span><span class="ar">كل الأعمال</span></a>
+        <a class="q" href="#services"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><span class="en">Product development</span><span class="ar">تطوير المنتجات</span></a>
+        <a class="q" href="#services"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M4.9 4.9l3.5 3.5M15.6 15.6l3.5 3.5M19.1 4.9l-3.5 3.5M8.4 15.6l-3.5 3.5"/></svg></div><span class="en">Technical support</span><span class="ar">الدعم الفني</span></a>
+        <a class="q" href="#services"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></div><span class="en">Integrations</span><span class="ar">التكاملات</span></a>
+        <a class="q" href="#skills"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><span class="en">Arabic &amp; RTL</span><span class="ar">العربية و RTL</span></a>
+        <a class="q" href="#work"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div><span class="en">All work</span><span class="ar">كل الأعمال</span></a>
       </div>
 
       <div class="hero-btns">
@@ -452,7 +475,7 @@ footer{margin-top:110px;background:#fff;border-top:1px solid var(--line)}
 
     <div class="hero-right">
       <div class="photo-card tilt" id="photoCard">
-        <img src="hero-fotor (1).png" alt="Muhammad Khalid Salam">
+        <img src="hero-fotor.png" alt="Muhammad Khalid Salam">
         <div class="pfoot">
           <div>
             <div class="pname"><span class="en">Khalid Salam</span><span class="ar">خالد سلام</span></div>
@@ -494,15 +517,15 @@ footer{margin-top:110px;background:#fff;border-top:1px solid var(--line)}
       </div>
     </div>
     <div class="skg">
-      <div class="skc sk1 tilt rv-in"><div class="shine"></div><div class="ic2">WEB</div><h4><span class="en">Web platforms</span><span class="ar">المنصات الإلكترونية</span></h4>
+      <div class="skc sk1 tilt rv-in"><div class="shine"></div><div class="ic2"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h4><span class="en">Web platforms</span><span class="ar">المنصات الإلكترونية</span></h4>
         <div class="tags"><span><span class="en">Clean architecture</span><span class="ar">بنية نظيفة</span></span><span><span class="en">Government portals</span><span class="ar">بوابات حكومية</span></span><span><span class="en">Staff apps</span><span class="ar">تطبيقات الموظفين</span></span><span><span class="en">Dashboards</span><span class="ar">لوحات تحكم</span></span></div></div>
-      <div class="skc sk2 tilt rv-in"><div class="shine"></div><div class="ic2">API</div><h4><span class="en">APIs &amp; integrations</span><span class="ar">الواجهات والتكاملات</span></h4>
+      <div class="skc sk2 tilt rv-in"><div class="shine"></div><div class="ic2"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h4><span class="en">APIs &amp; integrations</span><span class="ar">الواجهات والتكاملات</span></h4>
         <div class="tags"><span><span class="en">Payments</span><span class="ar">المدفوعات</span></span><span><span class="en">Messaging</span><span class="ar">الرسائل</span></span><span><span class="en">Webhooks</span><span class="ar">Webhooks</span></span><span><span class="en">e-Invoicing</span><span class="ar">الفوترة الإلكترونية</span></span></div></div>
-      <div class="skc sk3 tilt rv-in"><div class="shine"></div><div class="ic2">UX</div><h4><span class="en">Product &amp; experience</span><span class="ar">المنتج والتجربة</span></h4>
+      <div class="skc sk3 tilt rv-in"><div class="shine"></div><div class="ic2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><h4><span class="en">Product &amp; experience</span><span class="ar">المنتج والتجربة</span></h4>
         <div class="tags"><span><span class="en">Arabic / RTL</span><span class="ar">العربية / RTL</span></span><span><span class="en">Responsive</span><span class="ar">متجاوب</span></span><span><span class="en">Accessibility</span><span class="ar">إمكانية الوصول</span></span><span><span class="en">Mobile</span><span class="ar">الجوال</span></span></div></div>
-      <div class="skc sk4 tilt rv-in"><div class="shine"></div><div class="ic2">OPS</div><h4><span class="en">Delivery &amp; support</span><span class="ar">التسليم والدعم</span></h4>
+      <div class="skc sk4 tilt rv-in"><div class="shine"></div><div class="ic2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h4><span class="en">Delivery &amp; support</span><span class="ar">التسليم والدعم</span></h4>
         <div class="tags"><span><span class="en">Architecture</span><span class="ar">الهندسة المعمارية</span></span><span><span class="en">Production support</span><span class="ar">الدعم التشغيلي</span></span><span><span class="en">Code review</span><span class="ar">مراجعة الكود</span></span><span><span class="en">AI-assisted dev</span><span class="ar">التطوير بمساعدة الذكاء الاصطناعي</span></span></div></div>
-      <div class="skc sk5 tilt rv-in"><div class="shine"></div><div class="ic2">DB</div><h4><span class="en">Databases &amp; data</span><span class="ar">قواعد البيانات والبيانات</span></h4>
+      <div class="skc sk5 tilt rv-in"><div class="shine"></div><div class="ic2"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><h4><span class="en">Databases &amp; data</span><span class="ar">قواعد البيانات والبيانات</span></h4>
         <div class="tags"><span><span class="en">Database maintenance</span><span class="ar">صيانة قواعد البيانات</span></span><span><span class="en">Administration</span><span class="ar">إدارة القواعد</span></span><span><span class="en">Integration &amp; ETL</span><span class="ar">التكامل و ETL</span></span><span><span class="en">Reporting</span><span class="ar">التقارير</span></span></div></div>
     </div>
     <div class="strength rv-in">
@@ -525,6 +548,7 @@ footer{margin-top:110px;background:#fff;border-top:1px solid var(--line)}
     <div class="svc">
       <div class="feat tilt rv-in">
         <div class="ring"></div>
+        <div class="fi"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <h3><span class="en">Product development<br>from idea to launch</span><span class="ar">تطوير المنتجات<br>من الفكرة إلى الإطلاق</span></h3>
         <p><span class="en">Architecture, build and rollout of web and mobile products, designed for Arabic and English users from day one.</span><span class="ar">تصميم وبناء وإطلاق منتجات الويب والجوال، مصممة للمستخدمين بالعربية والإنجليزية من البداية.</span></p>
         <div class="btns">
@@ -533,19 +557,47 @@ footer{margin-top:110px;background:#fff;border-top:1px solid var(--line)}
         </div>
       </div>
       <div class="svcCard c1 tilt rv-in"><div class="shine"></div>
-        <div class="ic">SUP</div>
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="3" y="14" width="4" height="6" rx="1"/><rect x="17" y="14" width="4" height="6" rx="1"/></svg></div>
         <h4><span class="en">Technical support</span><span class="ar">الدعم الفني</span></h4>
         <p><span class="en">Keeping business-critical systems running: incident handling, root-cause analysis and stable releases.</span><span class="ar">إبقاء الأنظمة الحرجة تعمل: معالجة الأعطال وتحليل الأسباب الجذرية وإصدارات مستقرة.</span></p>
         <div class="tags"><span><span class="en">Incident response</span><span class="ar">معالجة الأعطال</span></span><span><span class="en">Monitoring</span><span class="ar">المراقبة</span></span><span><span class="en">Root-cause analysis</span><span class="ar">تحليل الأسباب</span></span></div>
       </div>
       <div class="svcCard c2 tilt rv-in"><div class="shine"></div>
-        <div class="ic">API</div>
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
         <h4><span class="en">Integrations &amp; payments</span><span class="ar">التكاملات والمدفوعات</span></h4>
         <p><span class="en">Connecting systems, payment gateways and messaging channels into reliable, verifiable flows.</span><span class="ar">ربط الأنظمة وبوابات الدفع وقنوات الرسائل في تدفقات موثوقة وقابلة للتحقق.</span></p>
         <div class="tags"><span><span class="en">Payment gateways</span><span class="ar">بوابات الدفع</span></span><span><span class="en">Messaging channels</span><span class="ar">قنوات الرسائل</span></span><span><span class="en">e-Invoicing</span><span class="ar">الفوترة الإلكترونية</span></span></div>
       </div>
     </div>
 
+
+    <h3 class="proc-h"><span class="en">How I work</span><span class="ar">طريقتي في العمل</span></h3>
+    <div class="process">
+      <div class="step rv-in">
+        <div class="sico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <div class="num">01</div>
+        <h5><span class="en">Discover</span><span class="ar">اكتشاف</span></h5>
+        <p><span class="en">Understand the business, requirements and constraints.</span><span class="ar">فهم العمل والمتطلبات والقيود.</span></p>
+      </div>
+      <div class="step rv-in">
+        <div class="sico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <div class="num">02</div>
+        <h5><span class="en">Architect</span><span class="ar">تصميم</span></h5>
+        <p><span class="en">Design a clear, maintainable solution.</span><span class="ar">تصميم حل واضح وقابل للصيانة.</span></p>
+      </div>
+      <div class="step rv-in">
+        <div class="sico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/></svg></div>
+        <div class="num">03</div>
+        <h5><span class="en">Build</span><span class="ar">بناء</span></h5>
+        <p><span class="en">Deliver in iterations with regular demos.</span><span class="ar">التسليم على مراحل مع عروض دورية.</span></p>
+      </div>
+      <div class="step rv-in">
+        <div class="sico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="3" y="14" width="4" height="6" rx="1"/><rect x="17" y="14" width="4" height="6" rx="1"/><path d="M19 20a4 4 0 0 1-4 2h-2"/></svg></div>
+        <div class="num">04</div>
+        <h5><span class="en">Support</span><span class="ar">دعم</span></h5>
+        <p><span class="en">Keep it running, improving and documented.</span><span class="ar">إبقاؤه يعمل ويتطور ومُوثَّق.</span></p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -641,24 +693,24 @@ footer{margin-top:110px;background:#fff;border-top:1px solid var(--line)}
     </div>
     <div class="rev">
       <div class="rvc tilt rv-in"><div class="shine"></div><div class="qm">“</div>
-        <p><span class="en">Exceptional technical depth. Delivered a complex system ahead of schedule with zero critical bugs.</span><span class="ar">عمق تقني استثنائي. سلّم نظاماً معقداً قبل الموعد دون أخطاء حرجة.</span></p>
+        <p><span class="en">Khalid's ability to read and understand the code written by previous programmers is a significant asset for rentaboat.com. He quickly grasps the logic and structure of existing code, enabling him to identify areas for improvement without extensive onboarding. This skill allows him to optimize performance by pinpointing inefficiencies and refactoring code, ensuring the platform runs smoothly. His expertise in handling legacy code ensures seamless integration of new features while maintaining functionality. Overall, Khalid's comprehensive skill set makes him an invaluable contributor to the ongoing success and efficiency of rentaboat.com.</span><span class="ar">قدرة خالد على قراءة الكود الذي كتبه المطورون السابقون وفهمه أصل مهم لـ rentaboat.com. يستوعب منطق الكود وبنيته بسرعة، فيحدد مجالات التحسين دون حاجة إلى تهيئة طويلة. تتيح له هذه المهارة تحسين الأداء عبر تحديد أوجه القصور وإعادة هيكلة الكود، لضمان سلاسة عمل المنصة. وخبرته في التعامل مع الأكواد القديمة تضمن دمج الميزات الجديدة بسلاسة مع الحفاظ على الوظائف. وبشكل عام، تجعل مجموعة مهاراته الشاملة خالد مساهماً لا يُقدَّر بثمن في استمرار نجاح المنصة وكفاءتها.</span></p>
         <div class="sep"></div>
-        <div class="auth"><div class="av">SM</div><div><div class="n">Sarah Mitchell</div><div class="r"><span class="en">CTO · Tech Startup, Dubai</span><span class="ar">CTO · شركة ناشئة، دبي</span></div><div class="stars">★★★★★</div></div></div>
+        <div class="auth"><div class="av">KH</div><div><div class="n"><span class="en">Kenny Hilderbrandt</span><span class="ar">كيني هيلدربراند</span></div><div class="r"><span class="en">Owner · Rentaboat, New York</span><span class="ar">مالك · Rentaboat، نيويورك</span></div><div class="stars">★★★★★</div></div></div>
       </div>
       <div class="rvc tilt rv-in"><div class="shine"></div><div class="qm">“</div>
-        <p><span class="en">Platform performance improved dramatically. Incredibly professional and understood every requirement perfectly.</span><span class="ar">تحسّن الأداء بشكل ملحوظ. محترف للغاية وفهم كل المتطلبات بدقة.</span></p>
+        <p><span class="en">Muhammad was diligent with the tasks requested of him and provided all the requests made of him.</span><span class="ar">كان محمد مجتهداً في المهام المطلوبة منه، وأنجز كل ما طُلب منه.</span></p>
         <div class="sep"></div>
-        <div class="auth"><div class="av">MA</div><div><div class="n">Mohammed Al-Harthy</div><div class="r"><span class="en">Product Lead · E-Commerce, Muscat</span><span class="ar">مدير منتج · تجارة إلكترونية، مسقط</span></div><div class="stars">★★★★★</div></div></div>
+        <div class="auth"><div class="av">BR</div><div><div class="n"><span class="en">S T</span><span class="ar"></span></div><div class="r"><span class="en">United States</span><span class="ar">الولايات المتحدة</span></div><div class="stars">★★★★★</div></div></div>
       </div>
       <div class="rvc tilt rv-in"><div class="shine"></div><div class="qm">“</div>
-        <p><span class="en">Delivered in record time with thorough documentation and zero hand-holding needed. Will absolutely work together again.</span><span class="ar">سلّم في وقت قياسي مع توثيق شامل. سنتعاون معه مجدداً بالتأكيد.</span></p>
+        <p><span class="en">Khalid will be one of my first preference to work with, in any of my projects. A complete gem! He has great expertise in technical areas and solid understanding with communication.</span><span class="ar">خالد من أوائل الأشخاص الذين أفضّل العمل معهم في أي من مشاريعي. جوهرة حقيقية! يمتلك خبرة كبيرة في المجالات التقنية وفهماً متيناً للتواصل.</span></p>
         <div class="sep"></div>
-        <div class="auth"><div class="av">LH</div><div><div class="n">Laila Hassan</div><div class="r"><span class="en">Operations Director · NGO</span><span class="ar">مديرة العمليات · منظمة غير ربحية</span></div><div class="stars">★★★★★</div></div></div>
+        <div class="auth"><div class="av">ABM</div><div><div class="n"><span class="en">Abdul Basit Mian</span><span class="ar">عبد الباسط ميان</span></div><div class="r"><span class="en">Owner · Kreative Solutions, United Arab Emirates</span><span class="ar">مالك · Kreative Solutions، الإمارات العربية المتحدة</span></div><div class="stars">★★★★★</div></div></div>
       </div>
       <div class="rvc tilt rv-in"><div class="shine"></div><div class="qm">“</div>
-        <p><span class="en">Rare to find someone who can architect, code cleanly, and explain every decision. Our go-to engineer.</span><span class="ar">نادراً ما تجد من يجمع بين التصميم والكود النظيف وشرح كل قرار بوضوح.</span></p>
+        <p><span class="en">Muhammad Khalid has excellently delivered the required work, demonstrating deep integrity and a strong passion for research, learning, adaptation, and problem-solving. I found him to be humble, supportive, and enthusiastic about accomplishing tasks. I highly recommend Muhammad Khalid and look forward to working with him in future engagements.</span><span class="ar">أنجز محمد خالد العمل المطلوب بامتياز، مُظهراً نزاهة عميقة وشغفاً قوياً بالبحث والتعلم والتكيّف وحل المشكلات. وجدته متواضعاً وداعماً ومتحمساً لإنجاز المهام. أوصي به بشدة وأتطلع للعمل معه في مشاريع قادمة.</span></p>
         <div class="sep"></div>
-        <div class="auth"><div class="av">KN</div><div><div class="n"><span class="en">Khalid Nasser</span><span class="ar">خالد ناصر</span></div><div class="r"><span class="en">CEO · FinTech, Riyadh</span><span class="ar">CEO · تقنية مالية، الرياض</span></div><div class="stars">★★★★★</div></div></div>
+        <div class="auth"><div class="av">SA</div><div><div class="n"><span class="en">Sarmad Asad</span><span class="ar">سرمد أسد</span></div><div class="r"><span class="en">Eng. Manager · Eocean, Pakistan</span><span class="ar">مدير هندسة · Eocean، باكستان</span></div><div class="stars">★★★★★</div></div></div>
       </div>
     </div>
   </div>
@@ -690,11 +742,9 @@ footer{margin-top:110px;background:#fff;border-top:1px solid var(--line)}
         <a class="mail" href="mailto:khalid.salam1@gmail.com">khalid.salam1@gmail.com</a>
         <div class="socials">
           <a class="sp" href="https://www.linkedin.com/in/muhammad-khalid-salam-8914a024/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <!-- TODO: replace # with your GitHub URL -->
-          <a class="sp" href="#" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="sp" href="https://github.com/khalidmandviwala" target="_blank" rel="noopener">GitHub ↗</a>
           <a class="sp wa" href="https://wa.me/96898557017?text=Hi%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp</a>
-          <!-- TODO: replace # with your Upwork profile URL -->
-          <a class="sp" href="#" target="_blank" rel="noopener">Upwork ↗</a>
+          <a class="sp" href="https://www.upwork.com/freelancers/~014ec9116af6c8ed49" target="_blank" rel="noopener">Upwork ↗</a>
         </div>
       </div>
     </div>
@@ -720,8 +770,8 @@ footer{margin-top:110px;background:#fff;border-top:1px solid var(--line)}
         <li><span class="en">Arabic &amp; RTL</span><span class="ar">العربية و RTL</span></li></ul></div>
       <div><h5><span class="en">Links</span><span class="ar">روابط</span></h5><ul>
         <li><a href="https://www.linkedin.com/in/muhammad-khalid-salam-8914a024/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="#" target="_blank" rel="noopener">Upwork</a></li>
+        <li><a href="https://github.com/khalidmandviwala" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.upwork.com/freelancers/~014ec9116af6c8ed49" target="_blank" rel="noopener">Upwork</a></li>
         <li><a href="https://wa.me/96898557017" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
     </div>
     <div class="fbottom">
