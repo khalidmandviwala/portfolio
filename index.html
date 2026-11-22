@@ -154,6 +154,9 @@ h2 em{font-style:normal;font-weight:300;color:var(--primary)}
 /* reveal */
 .rv-in{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv-in.in{opacity:1;transform:none}
+.rv-in.fx-l{transform:translateX(-64px)}
+.rv-in.fx-r{transform:translateX(64px)}
+.rv-in.fx-l.in,.rv-in.fx-r.in{transform:none}
 
 /* tilt cards */
 .tilt{transform-style:preserve-3d;transition:transform .25s ease-out,box-shadow .3s,border-color .3s;will-change:transform;position:relative}
@@ -475,7 +478,7 @@ footer{margin-top:110px;background:#fff;border-top:1px solid var(--line)}
 
     <div class="hero-right">
       <div class="photo-card tilt" id="photoCard">
-        <img src="hero-fotor.png" alt="Muhammad Khalid Salam">
+        <img src="hero-foto.png" alt="Muhammad Khalid Salam">
         <div class="pfoot">
           <div>
             <div class="pname"><span class="en">Khalid Salam</span><span class="ar">خالد سلام</span></div>
@@ -845,7 +848,11 @@ navLinks.forEach(a=>{const t=document.querySelector(a.getAttribute('href')); if(
 
 /* ── REVEAL ON SCROLL ── */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.rv-in').forEach((el,i)=>{el.style.transitionDelay=((i%4)*0.08)+'s';io.observe(el)});
+document.querySelectorAll('.rv-in').forEach((el,i)=>{
+  const sibs=[...el.parentElement.children].filter(c=>c.classList.contains('rv-in'));
+  const k=sibs.indexOf(el);
+  el.classList.add(el.classList.contains('head')||k%2===0?'fx-l':'fx-r');
+  el.style.transitionDelay=((k%4)*0.08)+'s';io.observe(el)});
 
 /* ── POINTER: parallax floating objects, cursor glow, tilt cards ── */
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
