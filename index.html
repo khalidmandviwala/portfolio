@@ -22,7 +22,8 @@
   --radius:20px;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Readex Pro',sans-serif;background:var(--lav2);color:var(--ink);line-height:1.6;font-size:16px;overflow-x:hidden}
+body{font-family:'Readex Pro',sans-serif;background:var(--lav2);color:var(--ink);line-height:1.6;font-size:16px;overflow-x:clip}
+html{overflow-x:clip}
 html[dir=ltr] .ar{display:none!important}
 html[dir=rtl] .en{display:none!important}
 a{color:inherit;text-decoration:none}
@@ -385,13 +386,16 @@ footer{margin-top:110px;background:#fff;border-top:1px solid var(--line)}
   .quick{gap:12px}
   .q{width:88px}
   .hero-metrics{gap:22px}
+  .rv-in.fx-l{transform:translateX(-24px)}
+  .rv-in.fx-r{transform:translateX(24px)}
   .bubble-wrap{right:12px;left:auto}
   [dir=rtl] .bubble-wrap{left:12px;right:auto}
   .bubble-wrap .bubble{width:210px}
   .fl .tip{display:none}
   .fl .bt{width:50px;height:50px}
   .fl.wa{bottom:86px;right:16px} .fl.em{bottom:20px;right:16px}
-  [dir=rtl] .fl{left:16px}
+  [dir=rtl] .fl{left:16px;right:auto}
+  [dir=rtl] .fl.wa,[dir=rtl] .fl.em{left:16px;right:auto}
   .fgrid{grid-template-columns:1fr}
 }
 @media (max-width:400px){
